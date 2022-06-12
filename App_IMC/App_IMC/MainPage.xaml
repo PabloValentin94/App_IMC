@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_IMC.MainPage"
+             Title="Aplicativo IMC">
+
+    <StackLayout Background="Black">
+
+        <Label Text="ÍNDICE DE MASSA CORPORAL"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="Large"
+               TextColor="Red"
+               Padding="25"/>
+
+        <StackLayout Background="White" Margin="5">
+
+            <Label Text="Informe seu Peso:"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"/>
+
+            <Entry x:Name="txt_peso"
+                   TextColor="Black"
+                   Keyboard="Numeric"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Informe sua Altura:"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"/>
+
+            <Entry x:Name="txt_altura"
+                   TextColor="Black"
+                   Keyboard="Numeric"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"/>
+
+            <Button Text="Calcular"
+                    Background="Green"
+                    TextColor="White"
+                    Clicked="Button_Clicked"/>
+
+              <Label Text="Resultado"
+                     TextColor="Black"
+                     x:Name="lbl_resultado"
+                     HorizontalTextAlignment="Center"
+                     FontAttributes="Bold"
+                     FontSize="Large"/>
+
+              <Label Text="Classificação"
+                     TextColor="Black"
+                     x:Name="lbl_classificacao"
+                     HorizontalTextAlignment="Center"
+                     FontAttributes="Bold"
+                     FontSize="Large"/>
+
+              <Label Text="Valores de Referência:"
+                     TextColor="Black"
+                     HorizontalTextAlignment="Center"
+                     FontAttributes="Bold"/>
+
+              <TableView>
+
+                     <TableRoot>
+
+                            <TableSection>
+
+                                   <TextCell TextColor="Black" Text="Abaixo do Peso (Abaixo de 18.5)."> </TextCell>
+                                   <TextCell TextColor="Black" Text="Peso Normal (Maior ou Igual a 18.5 e Menor que 25)."> </TextCell>
+                                   <TextCell TextColor="Black" Text="Sobrepeso (Maior ou Igual a 25 e Menor que 30)."> </TextCell>
+                                   <TextCell TextColor="Black" Text="Obesidade Grau I (Maior ou Igual a 30 e Menor que 35)."> </TextCell>
+                                   <TextCell TextColor="Black" Text="Obesidade Grau II (Maior ou Igual a 35 e Menor que 40)."> </TextCell>
+                                   <TextCell TextColor="Black" Text="Obesidade Grau III (Maior ou Igual a 40)."> </TextCell>
+
+                            </TableSection>
+
+                     </TableRoot>
+
+              </TableView>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
